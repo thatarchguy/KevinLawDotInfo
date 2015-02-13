@@ -1,13 +1,174 @@
----
-layout: post
-title: Open Source Continuous Deployment
-date: '2014-12-22T19:33:00.003-08:00'
-author: Kevin L
+--- 
+layout: post 
+title: Open Source Continuous Deployment 
+date: '2014-12-22T19:33:00.003-08:00' 
+author: Kevin L 
 tags: 
-modified_time: '2014-12-23T00:22:16.793-08:00'
-thumbnail: http://2.bp.blogspot.com/-5zvgfRz11X8/VJjFeHOBz_I/AAAAAAAAALU/a2ZJKqtJ4nU/s72-c/2014-12-22-192016_979x846_scrot.png
-blogger_id: tag:blogger.com,1999:blog-5768106710687360482.post-3600065257543056993
-blogger_orig_url: http://blog.kevinlaw.info/2014/12/open-source-continuous-deployment.html
+modified_time: '2014-12-23T00:22:16.793-08:00' 
+thumbnail: /images/post_opensourceCI/thumb_2014-12-22-192016_979x846_scrot.png 
+blogger_id: tag:blogger.com,1999:blog-5768106710687360482.post-3600065257543056993 
+blogger_orig_url: http://blog.kevinlaw.info/2014/12/open-source-continuous-deployment.html 
 ---
 
-<i><br /></i><i><br /></i><br /><div style="text-align: center;"><i><span style="font-size: small;">"Continuous Deployment is simple: just ship your code to customers as often as possible"</span></i></div><div style="text-align: center;"><span style="font-size: small;">&nbsp;-Timothy Fitz</span></div><div style="text-align: center;"><span style="font-size: small;"><br /></span></div><div style="text-align: left;"><span style="font-size: small;">Going from code to deployment in the easiest and most pain-free way is the goal.&nbsp; </span></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><span style="font-size: small;">This mostly includes:</span></div><div style="text-align: left;"><span style="font-size: small;">&nbsp;- Issue-Tracking System </span></div><div style="text-align: left;"><span style="font-size: small;">&nbsp;- Version Control </span></div><div style="text-align: left;"><span style="font-size: small;">&nbsp;- Continuous Integration</span></div><div style="text-align: left;"><span style="font-size: small;">&nbsp;- Build and Unit Tests</span></div><div style="text-align: left;"><span style="font-size: small;">&nbsp;- Deployment to Production</span></div><div style="text-align: left;"><span style="font-size: small;">&nbsp;- Fail-Fast </span></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><span style="font-size: small;">Services have been written to get the job done, but most are paid and hosted solutions.&nbsp;</span></div><div style="text-align: left;"><span style="font-size: small;">Github Enterprise, Jira, Gitlab, Travis-CI,&nbsp; etc...</span></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><span style="font-size: small;">All great tools for their use, but sometimes it' best to host the services yourself for no fees. The tools used here are all free and open source. </span></div><div style="text-align: left;"><br /><h4>Step 1. Version Control &amp; Issue Tracking</h4><br /></div><div class="separator" style="clear: both; text-align: center;"><span style="font-size: small;"></span></div><a href="http://2.bp.blogspot.com/-5zvgfRz11X8/VJjFeHOBz_I/AAAAAAAAALU/a2ZJKqtJ4nU/s1600/2014-12-22-192016_979x846_scrot.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://2.bp.blogspot.com/-5zvgfRz11X8/VJjFeHOBz_I/AAAAAAAAALU/a2ZJKqtJ4nU/s1600/2014-12-22-192016_979x846_scrot.png" height="275" width="320" /></a><span style="font-size: small;">Gogs is a Github clone written in Go. It has evolved into a respectable application. It features organizations, teams, issue tracking, repository hooks, and way more. Check it out. The project is currently hosted on <a href="https://github.com/gogits/gogs" target="_blank">Github</a>. </span><br /><span style="font-size: small;"><br /></span><span style="font-size: small;">Installation is easy,</span><br /><br /><span style="font-size: small;">1. Bring up a Linux Distro of your choice.</span><br /><span style="font-size: small;"><br /></span><span style="font-size: small;">2. Install git (obviously)</span><br /><span style="font-size: small;">&nbsp; &nbsp; <a href="http://gogs.io/docs/installation/install_from_binary.html" target="_blank">wget the latest Binary</a></span><br /><br /><span style="font-size: small;">3. <code>&nbsp;</code></span><br /><span style="font-size: small;"><code>&nbsp;&nbsp; $ mv output.zip /srv/ \</code></span><br /><span style="font-size: small;"><code>&nbsp;&nbsp; &amp;&amp; unzip /srv/output.zip</code></span><br /><span style="font-size: small;"><br /></span><span style="font-size: small;">4.<code>&nbsp;</code></span><br /><span style="font-size: small;"><code>&nbsp;&nbsp; $ bash /srv/gogs/start.sh</code></span><br /><span style="font-size: small;"><br /></span><span style="font-size: small;">5. Navigate to http://[IP-address]:3000</span><br /><div class="separator" style="clear: both; text-align: center;"><span style="font-size: small;"></span></div><br />And that's it. Setup a reverse proxy, ssl, and run it in a screen/tmux/nohup for better performance.<br /><br /><br /><h4>Step 2. Continuous Integration</h4><br /><div class="separator" style="clear: both; text-align: center;"></div><div class="separator" style="clear: both; text-align: center;"><a href="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-WLIdsX3jmrc%2FVJjP423HPvI%2FAAAAAAAAALs%2F3ymrjlGK7CI%2Fs1600%2F2014-12-22-211346_796x436_scrot.png&amp;container=blogger&amp;gadget=a&amp;rewriteMime=image%2F*" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-WLIdsX3jmrc/VJjP423HPvI/AAAAAAAAALs/3ymrjlGK7CI/s1600/2014-12-22-211346_796x436_scrot.png" height="175" width="320" /></a><a href="http://4.bp.blogspot.com/-Y6BEZ78zByU/VJjFeE0sQDI/AAAAAAAAALQ/fv8gtKSNvW4/s1600/2014-12-22-202249_1190x902_scrot.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><br /></a></div>Drone is a Continuous Integration service that utilizes Docker to build and test applications. Pull requests get tested before merging as well. Build status can be emailed, announced in IRC, or sent in other addon chat protocols<br /><br />It can OAuth logins with Github, Github Enterprise, Gitlab, Bitbucket, Gogs, and other services. So there is no need to register on the server, you authorize Drone access to your account and it will query for all your repositories.<br /><br /><br /><a href="http://3.bp.blogspot.com/-x6rqDdCRfiU/VJjFePpi-jI/AAAAAAAAALM/FgUGIlhnr8Q/s1600/2014-12-22-202622_420x977_scrot.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://3.bp.blogspot.com/-x6rqDdCRfiU/VJjFePpi-jI/AAAAAAAAALM/FgUGIlhnr8Q/s1600/2014-12-22-202622_420x977_scrot.png" height="320" width="137" /></a><br />&nbsp;Installation takes &lt; 5 minutes.<br /><br />1. Bring up a Debian-based Linux Distro of your choice.<br /><br />2. <br /><pre><code class="language-bash">   $ wget </code><code class="language-bash"><span class="st">http://<wbr></wbr>downloads.drone.io/master/drone.deb</span><br />   $ sudo dpkg <span class="token operator">-</span>i drone<span class="token punctuation">.</span>deb</code></pre><br />3. Add your gogs url to /etc/drone/drone.toml<br /><code>[gogs]&nbsp;</code><br /><code>url="http://[your-gogs-url]/"</code><br /><br />4. Login to Drone<br /><br />5. Have a drink<br /><br />To enable a repository for CI on Drone, check enable in the repository list, then commit a <a href="https://github.com/drone/drone/blob/v0.2.1/README.md#builds">.drone.yml</a> file to your repository.<br /><br /><h4>Step 3. Status &amp; Deployment</h4><br /><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-Y6BEZ78zByU/VJjFeE0sQDI/AAAAAAAAALQ/fv8gtKSNvW4/s1600/2014-12-22-202249_1190x902_scrot.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-Y6BEZ78zByU/VJjFeE0sQDI/AAAAAAAAALQ/fv8gtKSNvW4/s1600/2014-12-22-202249_1190x902_scrot.png" height="242" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Drone-Wall</td><td class="tr-caption" style="text-align: center;"></td><td class="tr-caption" style="text-align: center;"></td><td class="tr-caption" style="text-align: center;">&nbsp; </td></tr></tbody></table>Wall displays are an easy way to see the project status. <a href="https://github.com/drone/drone-wall">Drone-Wall</a> is perfect for a TV on the wall.<br /><br />Installation can be done using&nbsp;<a href="https://www.docker.com/" target="_blank">Docker</a><br /><br />1. Get your Drone API Key under "Account Settings" in Drone<br /><br />2. Fill in the variables here<br /><pre><code>    $ docker pull scottwferg/drone-wall<br />    $ docker run -d -p 3000:3000 -e API_SCHEME=HTTP -e API_DOMAIN=[DRONE_DOMAIN] \<br />    -e API_TOKEN=[API_KEY] -e API_PORT=80 scottwferg/drone-wall</code></pre><br />3. Have another drink.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-GIPcXDVoHPw/VJjXojrysNI/AAAAAAAAAME/WbTpROEk7ko/s1600/Snapchat--5268095761595617025.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-GIPcXDVoHPw/VJjXojrysNI/AAAAAAAAAME/WbTpROEk7ko/s1600/Snapchat--5268095761595617025.jpg" height="180" width="320" /></a></div><br /><br /><br />Now how do we get this successfully built code to production?<br /><br />The .drone.yml file has the ability to trigger a deployment at the successful completion of your build.<br /><br />Add the Drone public ssh key provided in your Account settings to your production server.<br />Add deploy parameters  in the .drone.yml file to ssh in, clone the master branch, and restart services.<br />More guidance can be found on the <a href="https://github.com/drone/drone/blob/v0.2.1/README.md#builds">Official documentation</a> and some <a href="http://docs.drone.io/ssh.html">basic scripting</a><br /><br /><h4>Conclusion</h4>Great!<br /><b>Now we have an open source, free, and automated environment that will version control, issue track, build, test, and deploy code.</b> This is perfect continuous deployment. Code that breaks will not be deployed, so chances of failure go down greatly. And since we are continuously deploying, no reason to wait a week to push fixes if we do fail.<br /><br />The code to deployment pipeline should be very fast. In the event of a failure, fixes need to get deployed as quickly as possible. "Set a fixed goal for the total commit-build-deploy process. At IMVU that  goal was roughly 10 minutes, at Canvas that goal was 5 minutes." - Timothy Fitz<br />Drone's build &amp; testing using Docker is extremely quick for my python-flask application. <br /><br /><br /><br />See how Etsy goes from code to deployment with <a href="https://codeascraft.com/2010/05/20/quantum-of-deployment/">Deployinator</a><br /><br />Inspired by:<br />http://timothyfitz.com/2009/02/10/continuous-deployment-at-imvu-doing-the-impossible-fifty-times-a-day/<br />http://timothyfitz.com/2012/11/25/paths-to-continuous-deployment/<br /><div class="separator" style="clear: both; text-align: center;"></div>
+<i><br /></i><i><br /></i>
+<br />
+<div style="text-align: center;"><i><span style="font-size: small;">"Continuous Deployment is simple: just ship your code to customers as often as possible"</span></i>
+</div>
+<div style="text-align: center;"><span style="font-size: small;">&nbsp;-Timothy Fitz</span>
+</div>
+<div style="text-align: center;"><span style="font-size: small;"><br /></span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">Going from code to deployment in the easiest and most pain-free way is the goal.&nbsp; </span>
+</div>
+<div style="text-align: left;">
+    <br />
+</div>
+<div style="text-align: left;"><span style="font-size: small;">This mostly includes:</span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">&nbsp;- Issue-Tracking System </span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">&nbsp;- Version Control </span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">&nbsp;- Continuous Integration</span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">&nbsp;- Build and Unit Tests</span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">&nbsp;- Deployment to Production</span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">&nbsp;- Fail-Fast </span>
+</div>
+<div style="text-align: left;">
+    <br />
+</div>
+<div style="text-align: left;">
+    <br />
+</div>
+<div style="text-align: left;"><span style="font-size: small;">Services have been written to get the job done, but most are paid and hosted solutions.&nbsp;</span>
+</div>
+<div style="text-align: left;"><span style="font-size: small;">Github Enterprise, Jira, Gitlab, Travis-CI,&nbsp; etc...</span>
+</div>
+<div style="text-align: left;">
+    <br />
+</div>
+<div style="text-align: left;"><span style="font-size: small;">All great tools for their use, but sometimes it' best to host the services yourself for no fees. The tools used here are all free and open source. </span>
+</div>
+<div style="text-align: left;">
+    <br />
+    <h4>Step 1. Version Control &amp; Issue Tracking</h4>
+    <br />
+</div>
+<div class="separator" style="clear: both; text-align: center;"><span style="font-size: small;"></span>
+</div>
+<a href="/images/post_opensourceCI/2014-12-22-192016_979x846_scrot.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="/images/post_opensourceCI/2014-12-22-192016_979x846_scrot.png" height="275" width="320" />
+</a><span style="font-size: small;">Gogs is a Github clone written in Go. It has evolved into a respectable application. It features organizations, teams, issue tracking, repository hooks, and way more. Check it out. The project is currently hosted on <a href="https://github.com/gogits/gogs" target="_blank">Github</a>. </span>
+<br /><span style="font-size: small;"><br /></span><span style="font-size: small;">Installation is easy,</span>
+<br />
+<br /><span style="font-size: small;">1. Bring up a Linux Distro of your choice.</span>
+<br /><span style="font-size: small;"><br /></span><span style="font-size: small;">2. Install git (obviously)</span>
+<br /><span style="font-size: small;">&nbsp; &nbsp; <a href="http://gogs.io/docs/installation/install_from_binary.html" target="_blank">wget the latest Binary</a></span>
+<br />
+<br /><span style="font-size: small;">3. <code>&nbsp;</code></span>
+<br /><span style="font-size: small;"><code>&nbsp;&nbsp; $ mv output.zip /srv/ \</code></span>
+<br /><span style="font-size: small;"><code>&nbsp;&nbsp; &amp;&amp; unzip /srv/output.zip</code></span>
+<br /><span style="font-size: small;"><br /></span><span style="font-size: small;">4.<code>&nbsp;</code></span>
+<br /><span style="font-size: small;"><code>&nbsp;&nbsp; $ bash /srv/gogs/start.sh</code></span>
+<br /><span style="font-size: small;"><br /></span><span style="font-size: small;">5. Navigate to http://[IP-address]:3000</span>
+<br />
+<div class="separator" style="clear: both; text-align: center;"><span style="font-size: small;"></span>
+</div>
+<br />And that's it. Setup a reverse proxy, ssl, and run it in a screen/tmux/nohup for better performance.
+<br />
+<br />
+<br />
+<h4>Step 2. Continuous Integration</h4>
+<br />
+<div class="separator" style="clear: both; text-align: center;"></div>
+<div class="separator" style="clear: both; text-align: center;">
+    <a href="https://images-blogger-opensocial.googleusercontent.com/gadgets/proxy?url=http%3A%2F%2F1.bp.blogspot.com%2F-WLIdsX3jmrc%2FVJjP423HPvI%2FAAAAAAAAALs%2F3ymrjlGK7CI%2Fs1600%2F2014-12-22-211346_796x436_scrot.png&amp;container=blogger&amp;gadget=a&amp;rewriteMime=image%2F*" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/images/post_opensourceCI/2014-12-22-211346_796x436_scrot.png" height="175" width="320" />
+    </a>
+    <a href="/images/post_opensourceCI/2014-12-22-202249_1190x902_scrot.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+        <br />
+    </a>
+</div>Drone is a Continuous Integration service that utilizes Docker to build and test applications. Pull requests get tested before merging as well. Build status can be emailed, announced in IRC, or sent in other addon chat protocols
+<br />
+<br />It can OAuth logins with Github, Github Enterprise, Gitlab, Bitbucket, Gogs, and other services. So there is no need to register on the server, you authorize Drone access to your account and it will query for all your repositories.
+<br />
+<br />
+<br />
+<a href="/images/post_opensourceCI/2014-12-22-202622_420x977_scrot.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="/images/post_opensourceCI/2014-12-22-202622_420x977_scrot.png" height="320" width="137" />
+</a>
+<br />&nbsp;Installation takes &lt; 5 minutes.
+<br />
+<br />1. Bring up a Debian-based Linux Distro of your choice.
+<br />
+<br />2.
+<br /><pre><code class="language-bash">   $ wget </code><code class="language-bash"><span class="st">http://<wbr></wbr>downloads.drone.io/master/drone.deb</span><br />   $ sudo dpkg <span class="token operator">-</span>i drone<span class="token punctuation">.</span>deb</code></pre>
+<br />3. Add your gogs url to /etc/drone/drone.toml
+<br /><code>[gogs]&nbsp;</code>
+<br /><code>url="http://[your-gogs-url]/"</code>
+<br />
+<br />4. Login to Drone
+<br />
+<br />5. Have a drink
+<br />
+<br />To enable a repository for CI on Drone, check enable in the repository list, then commit a <a href="https://github.com/drone/drone/blob/v0.2.1/README.md#builds">.drone.yml</a> file to your repository.
+<br />
+<br />
+<h4>Step 3. Status &amp; Deployment</h4>
+<br />
+<div class="separator" style="clear: both; text-align: center;"></div>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto; text-align: center;">
+    <tbody>
+        <tr>
+            <td style="text-align: center;">
+                <a href="/images/post_opensourceCI/2014-12-22-202249_1190x902_scrot.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="/images/post_opensourceCI/2014-12-22-202249_1190x902_scrot.png" height="242" width="320" />
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="tr-caption" style="text-align: center;">Drone-Wall</td>
+            <td class="tr-caption" style="text-align: center;"></td>
+            <td class="tr-caption" style="text-align: center;"></td>
+            <td class="tr-caption" style="text-align: center;">&nbsp; </td>
+        </tr>
+    </tbody>
+</table>Wall displays are an easy way to see the project status. <a href="https://github.com/drone/drone-wall">Drone-Wall</a> is perfect for a TV on the wall.
+<br />
+<br />Installation can be done using&nbsp;<a href="https://www.docker.com/" target="_blank">Docker</a>
+<br />
+<br />1. Get your Drone API Key under "Account Settings" in Drone
+<br />
+<br />2. Fill in the variables here
+<br /><pre><code>    $ docker pull scottwferg/drone-wall<br />    $ docker run -d -p 3000:3000 -e API_SCHEME=HTTP -e API_DOMAIN=[DRONE_DOMAIN] \<br />    -e API_TOKEN=[API_KEY] -e API_PORT=80 scottwferg/drone-wall</code></pre>
+<br />3. Have another drink.
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+    <a href="/images/post_opensourceCI/Snapchat--5268095761595617025.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="/images/post_opensourceCI/Snapchat--5268095761595617025.jpg" height="180" width="320" />
+    </a>
+</div>
+<br />
+<br />
+<br />Now how do we get this successfully built code to production?
+<br />
+<br />The .drone.yml file has the ability to trigger a deployment at the successful completion of your build.
+<br />
+<br />Add the Drone public ssh key provided in your Account settings to your production server.
+<br />Add deploy parameters in the .drone.yml file to ssh in, clone the master branch, and restart services.
+<br />More guidance can be found on the <a href="https://github.com/drone/drone/blob/v0.2.1/README.md#builds">Official documentation</a> and some <a href="http://docs.drone.io/ssh.html">basic scripting</a>
+<br />
+<br />
+<h4>Conclusion</h4>Great!
+<br /><b>Now we have an open source, free, and automated environment that will version control, issue track, build, test, and deploy code.</b> This is perfect continuous deployment. Code that breaks will not be deployed, so chances of failure go down greatly. And since we are continuously deploying, no reason to wait a week to push fixes if we do fail.
+<br />
+<br />The code to deployment pipeline should be very fast. In the event of a failure, fixes need to get deployed as quickly as possible. "Set a fixed goal for the total commit-build-deploy process. At IMVU that goal was roughly 10 minutes, at Canvas that goal was 5 minutes." - Timothy Fitz
+<br />Drone's build &amp; testing using Docker is extremely quick for my python-flask application.
+<br />
+<br />
+<br />
+<br />See how Etsy goes from code to deployment with <a href="https://codeascraft.com/2010/05/20/quantum-of-deployment/">Deployinator</a>
+<br />
+<br />Inspired by:
+<br />http://timothyfitz.com/2009/02/10/continuous-deployment-at-imvu-doing-the-impossible-fifty-times-a-day/
+<br />http://timothyfitz.com/2012/11/25/paths-to-continuous-deployment/
+<br />
+<div class="separator" style="clear: both; text-align: center;"></div>
