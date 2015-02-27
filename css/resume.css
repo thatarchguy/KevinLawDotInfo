@@ -635,26 +635,6 @@ dl em{
 
 }
 
-@media print{
-  .container{
-    border-top:none
-  }
-
-  .not-printed{
-    display:none
-  }
-
-  a{
-    text-decoration:none;
-    color:#000
-  }
-
-  .page-break{
-    page-break-before:always;
-    padding-top:20px
-  }
-
-}
 
 @page{
   size:auto;

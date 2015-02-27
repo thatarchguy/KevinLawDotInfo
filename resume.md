@@ -85,7 +85,6 @@ Teacher's Assistant - Intro to Networking
  
 **Member**, Computer Networking & Information Security Club  
 Competed in the 2013 & 2014 North Eastern Collegiate Cyber Defense Competition  
-Participated in the MITRE Capture the Flag Competition  
 Won contest to attend Black Hat Security Conference 2014  
 Attended Defcon 21 & 22  
 Contributed to the Linux Kernel
