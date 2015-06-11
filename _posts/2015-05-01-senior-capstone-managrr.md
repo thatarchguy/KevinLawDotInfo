@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Senior Capstone: ManaGRR'
-date: '2015-05-02T19:33:00.003-08:00'
+date: '2015-05-02'
 author: Kevin L
 thumbnail: /images/post_capstone/grr_thumbnail.png
 ---

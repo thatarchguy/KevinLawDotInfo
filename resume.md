@@ -17,7 +17,7 @@ permalink: /KevinLawResume.html
 **Champlain College** *Burlington VT* __May 2015__   
 Bachelor of Science in Computer Networking and Information Security  
 Specialization in Cyber Security, Minor in Digital Forensics  
-Dean's list - 3.8 GPA  
+Dean's list - 3.8 GPA  | Trustee's Scholar 
 Teacher's Assistant - Intro to Networking 
 
 
@@ -53,27 +53,28 @@ Teacher's Assistant - Intro to Networking
 1. Linux Servers & Security
 1. Services in Windows, Linux, BSD, & Solaris
 1. WebApp Development
-1. Perl, Python,  TCL
-1. C, C++, GO, VB.net
+1. Perl, Python, TCL, C, C++, Java
 1. Flask, SQLAlchemy, ExtJS, AngularJS, JQuery
 1. Agile & Scrum Software Development
-1. DevOps
 
 
 ------
 
 ### Experience
 
+**Dell SecureWorks Counter Threat Unit**  *| June 2015 - Present*  
+	*Information Security Research Advisor*
+
 **Dell SecureWorks Counter Threat Unit**  *| May 2014 - August 2014*  
 	*Security Researcher Intern*  
 	Developed application to provide coverage metrics for iSensor IPS  
 	Web application using Python Flask and Extjs frameworks  
 
-**Senator Patrick Leahy Center for Digital Investigation (LCDI)**  *| April 2013 to Present*  
+**Senator Patrick Leahy Center for Digital Investigation (LCDI)**  *| April 2013 to May 2015*  
 	*Network Administrator*  
 	Imaged computers across a network using WDS  
 	Implemented a Backup Solution using RAID arrays and Domain Isolation   
-	Maintained a virtualized server environment using ESXi  
+	Maintained a virtualized server environment using vSphere
 
 ------
 
@@ -81,9 +82,6 @@ Teacher's Assistant - Intro to Networking
 **AccessData Certified Examiner (ACE)** *| Spring 2013*  
 **CompTIA Security+ Certified** *| Fall 2013*  
 **VMware Certified Associate - Data Center Virtualization** *| Fall 2013*  
-
- 
-**Member**, Computer Networking & Information Security Club  
 Competed in the 2013, 2014, & 2015 North Eastern Collegiate Cyber Defense Competition  
 Won contest to attend Black Hat Security Conference 2014  
 Attended Defcon 21 & 22  
