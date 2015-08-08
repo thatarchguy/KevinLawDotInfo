@@ -17,7 +17,7 @@ permalink: /KevinLawResume.html
 **Champlain College** *Burlington VT* __May 2015__   
 Bachelor of Science in Computer Networking and Information Security  
 Specialization in Cyber Security, Minor in Digital Forensics  
-Dean's list - 3.8 GPA  | Trustee's Scholar 
+Dean's list - 3.8 GPA  | Trustee's Scholar  
 Teacher's Assistant - Intro to Networking 
 
 
@@ -52,10 +52,12 @@ Teacher's Assistant - Intro to Networking
 1. Deploying Virtual Environments
 1. Linux Servers & Security
 1. Services in Windows, Linux, BSD, & Solaris
-1. WebApp Development
-1. Perl, Python, TCL, C, C++, Java
-1. Flask, SQLAlchemy, ExtJS, AngularJS, JQuery
+1. Full-Stack Development
 1. Agile & Scrum Software Development
+1. Scripting Automated Deployments
+1. Perl, Python, TCL, C, C++, Java, Ruby
+1. Flask, SQLAlchemy, Rails, Sinatra
+1. ExtJS, AngularJS, JQuery, CoffeeScript
 
 
 ------
@@ -63,11 +65,12 @@ Teacher's Assistant - Intro to Networking
 ### Experience
 
 **Dell SecureWorks Counter Threat Unit**  *| June 2015 - Present*  
-	*Information Security Research Advisor*
+	*Information Security Research Advisor*  
+	Automation of application deployments in local and AWS environments
 
 **Dell SecureWorks Counter Threat Unit**  *| May 2014 - August 2014*  
 	*Security Researcher Intern*  
-	Developed application to provide coverage metrics for iSensor IPS  
+	Developed application to provide coverage metrics for iSensor Appliance   
 	Web application using Python Flask and Extjs frameworks  
 
 **Senator Patrick Leahy Center for Digital Investigation (LCDI)**  *| April 2013 to May 2015*  
