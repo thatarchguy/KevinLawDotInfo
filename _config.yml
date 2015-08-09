@@ -9,4 +9,5 @@ twitter_username: thatarchguy
 github_username:  thatarchguy
 permalink: /blog/:title
 
+highlighter: pygments
 markdown: redcarpet

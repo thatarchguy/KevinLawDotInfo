@@ -23,7 +23,7 @@ For class, my group was assigned a project to create a portable firewall using a
 The default login for raspbian is pi:raspberry
 
 ###Misc Configs
-```
+``` bash
 pi@raspberrypi ~ $ sudo su -
 root@raspberrypi:~# apt-get update && apt-get upgrade
 root@raspberrypi:~# apt-get install isc-dhcp-server bind9 snort wpasupplicant wireless-tools openssh-server vim tmux
@@ -86,7 +86,7 @@ We use malware-domains.com for this, since that site provides a decently up-to-d
 
 Edit ```[cron-update-dns.sh]```
 
-```sh
+``` bash
 #!/bin/bash
 wget http://malware-domains.com/files/malwaredomains.zones.zip
 unzip malwaredomains.zones.zip
@@ -147,7 +147,7 @@ Now we gotta connect to wifi. I wish webmin would supply a module for this, or a
 
 Basically, I just use
 
-```
+``` bash
 $ iwlist wlan0 scan | less
 $ iwconfig wlan0 essid "xfinitywifi" channel 11 mode Managed
 ```

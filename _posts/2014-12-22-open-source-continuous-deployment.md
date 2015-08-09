@@ -44,14 +44,15 @@ Installation is easy,
     [wget the latest Binary](http://gogs.io/docs/installation/install_from_binary.html)
 
  - .3. 
-  ``` 
-   $ mv output.zip /srv/ \
-   && unzip /srv/output.zip
-  ```
+
+    ``` bash
+   $ mv output.zip /srv/ && unzip /srv/output.zip
+    ```
  - .4. 
-  ```
+
+    ``` bash
    $ bash /srv/gogs/start.sh
-  ```
+    ```
  - .5. Navigate to http://[IP-address]:3000
 
 And that's it. Setup a reverse proxy, ssl, and run it in a screen/tmux/nohup for better performance.
@@ -73,14 +74,14 @@ It can OAuth logins with Github, Github Enterprise, Gitlab, Bitbucket, Gogs, and
 
  - .2. 
 
-    ```
+    ``` bash
    $ wget http://downloads.drone.io/master/drone.deb
    $ sudo dpkg -i drone.deb
     ```
 
  - .3. Add your gogs url to /etc/drone/drone.toml
 
-    ```
+    ``` bash
     [gogs] 
     url="http://[your-gogs-url]/"
     ```
@@ -107,7 +108,7 @@ Installation can be done using [Docker](https://www.docker.com/)
 
  - .2. Fill in the variables here
 
-    ```
+    ``` bash
     $ docker pull scottwferg/drone-wall
     $ docker run -d -p 3000:3000 -e API_SCHEME=HTTP -e API_DOMAIN=[DRONE_DOMAIN] \
     -e API_TOKEN=[API_KEY] -e API_PORT=80 scottwferg/drone-wall
