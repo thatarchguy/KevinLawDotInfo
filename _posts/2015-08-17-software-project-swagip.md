@@ -44,11 +44,11 @@ Just a little docker compose magic:
 $ docker-compose up
 ```
 
-Simple! And with that, I can scale the application up to hundreds of containers.
-![scale](/images/post_swagip/scale.png)
+Simple! And with that, I can scale the application up to hundreds of containers.  
+![scale](/images/post_swagip/scale.png)  
 
 
-![loadbalance](/images/post_swagip/loadbalance.gif)
+![loadbalance](/images/post_swagip/loadbalance.gif)  
 I made some minor modifications to the app to provide the container id.  
 (hint: it's in $HOSTNAME)
 
