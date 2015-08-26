@@ -22,7 +22,9 @@ The WebUI has all the details.
 [Docker-compose](https://docs.docker.com/compose/) is a tool for container linking and deployment. It is great for multi-container applications. It has this nifty little feature called "scale". This feature lets you spin up more containers of your application. 
 
 Scaling with docker-compose is easy. You just specify which node you want to scale and the quantity!
-It's best to throw a load balancer in front of your application.
+It's best to throw a load balancer in front of your application.  
+
+![docker-compose](/images/post_swagip/docker-compose.png)  
 
 Here is my docker-compose.yml  
 
