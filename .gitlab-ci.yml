@@ -2,7 +2,7 @@ image: ruby:2.1
 
 pages:
   script:
-  - gem install jekyll
+  - gem install jekyll jekyll-gist redcarpet
   - jekyll build -d public/
   artifacts:
     paths:
