@@ -2,9 +2,9 @@ image: ruby:2.1
 
 pages:
   script:
-  - gem install jekyll jekyll-gist redcarpet wkhtmltoprint
+  - gem install jekyll jekyll-gist redcarpet wkhtmltopdf-binary
   - jekyll build -d public/
-  - wkhtmltoprint public/KevinLawResume.html public/KevinLawResume.pdf --user-style-sheet css/resume.css
+  - wkhtmltopdf public/KevinLawResume.html public/KevinLawResume.pdf --user-style-sheet css/resume.css
   artifacts:
     paths:
     - public
