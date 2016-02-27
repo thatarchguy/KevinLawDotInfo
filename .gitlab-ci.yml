@@ -1,12 +1,12 @@
 image: ruby:2.1
 
 before_script:
-  - apt-get update -qq && apt-get install -y -qq wkhtmltopdf
+  - apt-get update -qq && apt-get install -y -qq wkhtmltopdf xvfb
 pages:
   script:
   - gem install jekyll jekyll-gist redcarpet
   - jekyll build -d public/
-  - wkhtmltopdf --user-style-sheet css/resume.css public/KevinLawResume.html public/KevinLawResume.pdf
+  - xvfb-run wkhtmltopdf --user-style-sheet css/resume.css public/KevinLawResume.html public/KevinLawResume.pdf
   artifacts:
     paths:
     - public
