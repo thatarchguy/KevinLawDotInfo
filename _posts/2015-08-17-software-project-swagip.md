@@ -19,7 +19,7 @@ Any headers sent are available to be requested as well, such as user-agent and x
 The WebUI has all the details.
 
 
-[Docker-compose](https://docs.docker.com/compose/) is a tool for container linking and deployment. It is great for multi-container applications. It has this nifty little feature called "scale". This feature lets you spin up more containers of your application. 
+[Docker-compose](https://docs.docker.com/compose/) is a tool for container linking and deployment. It is great for multi-container applications. It has this nifty little feature called "scale". This feature lets you spin up more containers of your application.
 
 Scaling with docker-compose is easy. You just specify which node you want to scale and the quantity!
 It's best to throw a load balancer in front of your application.  
@@ -60,7 +60,7 @@ I was having issues with getting the haproxy to see the other nodes. It's best t
 ``` bash
 $ docker-compose scale haproxy=0
 $ docker-compose scale web=10
-$ docker-compose scale haproxy=1 
+$ docker-compose scale haproxy=1
 ```
 
-More can be found at [SwagIP project page](https://github.com/thatarchguy/swagip)
+More can be found at [SwagIP project page](https://github.com/stackfocus/swagip)
