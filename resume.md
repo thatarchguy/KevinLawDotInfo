@@ -7,7 +7,7 @@ permalink: /KevinLawResume.html
 # Kevin Law
 ## Information Security Analyst
 
-> [http://kevinlaw.info](http://www.kevinlaw.info) <br>
+> [https://kevinlaw.info](https://www.kevinlaw.info) <br>
 > [mail@kevinlaw.info](mailto:mail@kevinlaw.info)
 
 ------
@@ -18,7 +18,7 @@ permalink: /KevinLawResume.html
 Bachelor of Science in Computer Networking and Information Security  
 Specialization in Cyber Security, Minor in Digital Forensics  
 Dean's list - 3.8 GPA  | Trustee's Scholar  
-Teacher's Assistant - Intro to Networking 
+Teacher's Assistant - Intro to Networking
 
 
 ------
@@ -28,7 +28,7 @@ Teacher's Assistant - Intro to Networking
 1. Networking & Security
 1. Computer Theory
 1. Windows Server Admin  
-1. Linux Systems Admin 
+1. Linux Systems Admin
 1. Operating Systems
 1. Digital Forensics Tools
 1. Operating System Forensics
@@ -50,15 +50,14 @@ Teacher's Assistant - Intro to Networking
 1. Intrusion Detection/Prevention Systems
 1. Server Backups and Configuration
 1. Deploying Virtual Environments
-1. Linux Servers & Security
 1. Services in Windows, Linux, BSD, & Solaris
 1. Full-Stack Development
 1. Agile & Scrum Software Development
-1. Scripting Automated Deployments
+1. Automated Deployments
+1. Converting Applications to Docker
 1. Perl, Python, TCL, C, C++, Java, Ruby
 1. Flask, SQLAlchemy, Rails, Sinatra
-1. ExtJS, AngularJS, JQuery, CoffeeScript
-
+1. ExtJS, JQuery, CoffeeScript
 
 ------
 
@@ -66,12 +65,17 @@ Teacher's Assistant - Intro to Networking
 
 **Dell SecureWorks Counter Threat Unit**  *| June 2015 - Present*  
 	*Information Security Research Advisor*  
-	Automation of application deployments in local and AWS environments
+	Delivered deployment pipelines for AWS, vRealize, and Marathon  
+	  - Using Packer, Ansible, and Terraform  
+  Experimented with converting to Docker  
+  Dynamic Configuration Management using Vault  
+	Implemented ChatOps and maintained Hubot  
+	Python Flask development for various security-related tools
 
 **Dell SecureWorks Counter Threat Unit**  *| May 2014 - August 2014*  
 	*Security Researcher Intern*  
-	Developed application to provide coverage metrics for iSensor Appliance   
-	Web application using Python Flask and Extjs frameworks  
+	Developed web application to provide coverage metrics for iSensor Appliance   
+	 - Using Python Flask and Extjs
 
 **Senator Patrick Leahy Center for Digital Investigation (LCDI)**  *| April 2013 to May 2015*  
 	*Network Administrator*  
@@ -88,7 +92,8 @@ Teacher's Assistant - Intro to Networking
 Competed in the 2013, 2014, & 2015 North Eastern Collegiate Cyber Defense Competition  
 Won contest to attend Black Hat Security Conference 2014  
 Attended Defcon 21 & 22  
-Contributed to the Linux Kernel - bf5777bcdc540661f2f5d531a13e4e9c9fb7ee22
+Attended DevopsDays Atlanta 2016  
+Contributed to the Linux Kernel - bf5777bcdc540661f2f5d531a13e4e9c9fb7ee22  
+This resume has its own continuous delivery pipeline - https://kevinlaw.info/blog/continuous-delivery-resume.html
 
 ------
-
