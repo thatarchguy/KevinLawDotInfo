@@ -1,4 +1,4 @@
-image: ruby:2.1
+image: ruby:2.2
 
 before_script:
   - apt-get update -qq && apt-get install -y -qq wkhtmltopdf xvfb
@@ -12,3 +12,9 @@ pages:
     - public
   only:
   - gh-pages
+
+pages_fix:
+  script:
+  - gem install jekyll jekyll-gist redcarpet
+  - jekyll build -d public/
+  - xvfb-run wkhtmltopdf --user-style-sheet css/resume.css public/KevinLawResume.html public/KevinLawResume.pdf
