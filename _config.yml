@@ -8,7 +8,7 @@ url: "https://www.kevinlaw.info" # the base hostname & protocol for your site
 twitter_username: thatarchguy
 github_username:  thatarchguy
 permalink: /blog/:title.html
-gems: [redcarpet, jekyll-gist]
+plugins: [redcarpet, jekyll-gist]
 highlighter: Rouge
 markdown: redcarpet
 redcarpet:
