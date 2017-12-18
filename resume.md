@@ -86,6 +86,7 @@ Teacher's Assistant - Intro to Networking
 ------
 
 ### Activities & Achievements
+**AWS Certified SysOps Administrator - Associate** *| Fall 2017*  
 **AccessData Certified Examiner (ACE)** *| Spring 2013*  
 **CompTIA Security+ Certified** *| Fall 2013*  
 **VMware Certified Associate - Data Center Virtualization** *| Fall 2013*  
