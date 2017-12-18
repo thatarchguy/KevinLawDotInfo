@@ -1,20 +1,21 @@
 image: ruby:2.2
 
-before_script:
-  - apt-get update -qq && apt-get install -y -qq wkhtmltopdf xvfb
-pages:
+.ci-template: &ci-template
+  stage: build
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq wkhtmltopdf xvfb
   script:
   - gem install jekyll jekyll-gist redcarpet
   - jekyll build -d public/
   - xvfb-run wkhtmltopdf --user-style-sheet css/resume.css public/KevinLawResume.html public/KevinLawResume.pdf
+
+Build Website:
+  <<: *ci-template
+
+Deploy to Pages:
+  <<: *ci-template
   artifacts:
     paths:
     - public
   only:
   - gh-pages
-
-pages_fix:
-  script:
-  - gem install jekyll jekyll-gist redcarpet
-  - jekyll build -d public/
-  - xvfb-run wkhtmltopdf --user-style-sheet css/resume.css public/KevinLawResume.html public/KevinLawResume.pdf
