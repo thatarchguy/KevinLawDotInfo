@@ -70,7 +70,7 @@ Delivered deployment pipelines for AWS, vRealize, and Marathon
 Converted Proof of Concept projects to full-stack production grade applications  
 Dynamic Configuration Management using Vault  
 Experimented with converting to Docker  
-Python Flask development for various security-related tools  
+Python Flask development for various security-	related tools  
 Implemented ChatOps and maintained Hubot  
 
 **Dell SecureWorks Counter Threat Unit**  *| May 2014 - August 2014*  
@@ -94,7 +94,7 @@ Maintained a virtualized server environment using vSphere
 Competed in the 2013, 2014, & 2015 North Eastern Collegiate Cyber Defense Competition  
 Won contest to attend Black Hat Security Conference 2014  
 Attended Defcon 21 & 22  
-Attended Shmoocon 2018
+Attended Shmoocon 2018  
 Attended DevopsDays Atlanta 2016  
 Contributed to the Linux Kernel - bf5777bcdc540661f2f5d531a13e4e9c9fb7ee22  
 This resume has its own continuous delivery pipeline (https://bit.ly/2HfOEpv)

@@ -14,6 +14,7 @@ Build Website:
 
 Deploy to Pages:
   <<: *ci-template
+  stage: deploy
   artifacts:
     paths:
     - public
