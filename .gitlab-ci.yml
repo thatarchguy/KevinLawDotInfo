@@ -12,9 +12,8 @@ image: ruby:2.2
 Build Website:
   <<: *ci-template
 
-Deploy to Pages:
+pages:
   <<: *ci-template
-  stage: deploy
   artifacts:
     paths:
     - public
