@@ -64,24 +64,25 @@ Teacher's Assistant - Intro to Networking
 ### Experience
 
 **Dell SecureWorks Counter Threat Unit**  *| June 2015 - Present*  
-	*Information Security Research Advisor*  
-	Delivered deployment pipelines for AWS, vRealize, and Marathon  
-	  - Using Packer, Ansible, and Terraform  
-  Experimented with converting to Docker  
-  Dynamic Configuration Management using Vault  
-	Implemented ChatOps and maintained Hubot  
-	Python Flask development for various security-related tools
+*Information Security Research Advisor*  
+Delivered deployment pipelines for AWS, vRealize, and Marathon  
+  - Using Packer, Ansible, and Terraform (https://bit.ly/2v5DbDW)  
+Converted Proof of Concept projects to full-stack production grade applications  
+Dynamic Configuration Management using Vault  
+Experimented with converting to Docker  
+Python Flask development for various security-related tools  
+Implemented ChatOps and maintained Hubot  
 
 **Dell SecureWorks Counter Threat Unit**  *| May 2014 - August 2014*  
-	*Security Researcher Intern*  
-	Developed web application to provide coverage metrics for iSensor Appliance   
-	 - Using Python Flask and Extjs
+*Security Researcher Intern*  
+Developed web application to provide coverage metrics for iSensor Appliance   
+  - Using Python Flask and Extjs
 
 **Senator Patrick Leahy Center for Digital Investigation (LCDI)**  *| April 2013 to May 2015*  
-	*Network Administrator*  
-	Imaged computers across a network using WDS  
-	Implemented a Backup Solution using RAID arrays and Domain Isolation   
-	Maintained a virtualized server environment using vSphere
+*Network Administrator*  
+Imaged computers across a network using WDS  
+Implemented a Backup Solution using RAID arrays and Domain Isolation   
+Maintained a virtualized server environment using vSphere
 
 ------
 
@@ -93,8 +94,9 @@ Teacher's Assistant - Intro to Networking
 Competed in the 2013, 2014, & 2015 North Eastern Collegiate Cyber Defense Competition  
 Won contest to attend Black Hat Security Conference 2014  
 Attended Defcon 21 & 22  
+Attended Shmoocon 2018
 Attended DevopsDays Atlanta 2016  
 Contributed to the Linux Kernel - bf5777bcdc540661f2f5d531a13e4e9c9fb7ee22  
-This resume has its own continuous delivery pipeline - https://kevinlaw.info/blog/continuous-delivery-resume.html
+This resume has its own continuous delivery pipeline (https://bit.ly/2HfOEpv)
 
 ------
