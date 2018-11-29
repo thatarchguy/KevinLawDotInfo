@@ -1,13 +1,12 @@
-image: ruby:2.2
+image: monachus/hugo:latest
 
 .ci-template: &ci-template
   stage: build
   before_script:
     - apt-get update -qq && apt-get install -y -qq wkhtmltopdf xvfb
   script:
-  - gem install jekyll jekyll-gist redcarpet
-  - jekyll build -d public/
-  - xvfb-run wkhtmltopdf --user-style-sheet css/resume.css public/KevinLawResume.html public/KevinLawResume.pdf
+  - hugo
+  - xvfb-run wkhtmltopdf --user-style-sheet static/css/resume.css public/resume/index.html public/kevinlawresume.pdf
 
 Build Website:
   <<: *ci-template
