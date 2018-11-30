@@ -1,0 +1,65 @@
+baseurl = "https://www.kevinlaw.info"
+title = "Kevin Law"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+disablePathToLower = false
+
+paginate = 100
+canonifyurls = true
+
+pygmentsstyle = "vs"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+    author = "Kevin Law"
+    info = "Site Reliability Engineer & Security Professional"
+    description = "Kevin Law's personal website"
+    keywords = "blog,developer,personal"
+    avatarurl = "images/avatar.jpg"
+
+    favicon_32 = "/img/favicon-32x32.png"
+    favicon_16 = "/img/favicon-16x16.png"
+
+    footercontent = ""
+
+    hidecredits = true
+    hidecopyright = true
+
+    rtl = false
+
+    math = true
+    custom_css = ["css/custom.css"]
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/thatarchguy"
+[[params.social]]
+    name = "Gitlab"
+    icon = "fab fa-gitlab fa-2x"
+    weight = 2
+    url = "https://gitlab.com/thatarchguy"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter fa-2x"
+    weight = 3
+    url = "https://twitter.com/thatarchguy"
+[[params.social]]
+    name = "Keybase"
+    icon = "fas fa-key fa-2x"
+    weight = 4
+    url = "https://keybase.io/thatarchguy"
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "Resume"
+    weight = 2
+    url = "/kevinlawresume.pdf"

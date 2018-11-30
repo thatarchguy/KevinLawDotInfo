@@ -1,8 +1,8 @@
 ## My website | [![Build Status](https://travis-ci.org/thatarchguy/KevinLawDotInfo.svg)](https://travis-ci.org/thatarchguy/KevinLawDotInfo)
 ---
-Written in Jekyll
+Written in Hugo
 
 ### To Run:
-```sh
-$ jekyll serve
+```shell
+$ hugo
 ```
