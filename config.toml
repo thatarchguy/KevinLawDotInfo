@@ -8,7 +8,7 @@ disablePathToLower = false
 paginate = 100
 canonifyurls = true
 
-pygmentsstyle = "vs"
+pygmentsstyle = "dracula"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -31,6 +31,7 @@ pygmentscodefencesguesssyntax = true
 
     math = true
     custom_css = ["css/custom.css"]
+    inverted = false
 
 # Social links
 [[params.social]]
