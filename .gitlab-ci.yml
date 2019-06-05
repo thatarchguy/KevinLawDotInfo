@@ -1,0 +1,23 @@
+image: monachus/hugo:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+.ci-template: &ci-template
+  stage: build
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq wkhtmltopdf xvfb
+  script:
+  - hugo
+  - xvfb-run wkhtmltopdf --user-style-sheet static/css/resume.css public/resume/index.html public/kevinlawresume.pdf
+
+Build Website:
+  <<: *ci-template
+
+pages:
+  <<: *ci-template
+  artifacts:
+    paths:
+    - public
+  only:
+  - gh-pages
