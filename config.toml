@@ -12,6 +12,9 @@ pygmentsstyle = "dracula"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [params]
     author = "Kevin Law"
     info = "Site Reliability Engineer & Security Professional"

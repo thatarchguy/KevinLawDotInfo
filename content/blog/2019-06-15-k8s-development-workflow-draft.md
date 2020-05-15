@@ -12,6 +12,15 @@ categories:
 - Kubernetes
 ---
 
+
+**Update 2020-04-23**  
+It seems like Draft has been abandoned. One of the maintainers commented:
+>"Apologies for the delay on a response. Right now, our team has been re-allocated to other projects (Helm 3 being one of them) and we don't have the time to move Draft further than where it is at the moment. I hope we can get back to it at some point. [..]" [Github](https://github.com/Azure/draft/issues/957#issuecomment-618495363)
+
+So take this blog post with a grain of salt. Technology moves extremely fast in this space.
+
+---
+
 Developing applications for Kubernetes (K8s) can be difficult because the development feedback loop takes a long time. You modify your application, build the docker image, push the image to a repo, redeploy the helm chart, and _finally_ check the deployment to see if it's okay. If you're using Continuous integration to do that for you, then you have the extra steps of committing to version control and pushing to your pipeline.
 
 Enter [Draft.sh](https://draft.sh/)
