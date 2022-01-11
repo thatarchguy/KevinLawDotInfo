@@ -12,7 +12,7 @@ layout: resume
 > [https://kevinlaw.info](https://www.kevinlaw.info) | [mail@kevinlaw.info](mailto:mail@kevinlaw.info) <br>
 > [Github](https://github.com/thatarchguy) | [Codewars](https://www.codewars.com/users/thatarchguy)
 
- - **Five+** years working in application development with high availability and time-critical services.
+ - **Seven+** years working in application development with high availability and time-critical services.
  - Eight+ years experience in various facets of **information security**
  - Experienced working successfully with **remote teams of all sizes** to bring projects to timely release.
  - Continuously up to date with **emerging** infrastructure and development **trends**, **methodology**, and **tooling**.
@@ -31,9 +31,12 @@ Senior Principal DevOps Engineer
 - Complete CICD automation for team using Gitlab-CI and custom hooks
 - Deployments to production **hundreds of times** per day
 - Cookiecutter project templates for Engineering team to use, including importable modules for Gitlab-CI
-- Created **Push-Button Kubernetes Clusters** using Terraform and Helmfile  
-- Wrote **Golang** application to generate Terraform from a yaml specification  
-- Supported a rapidly growing team through **metrics driven automation**  
+- Developed **Push-Button Kubernetes Clusters** using Terraform, and GitOps
+- Created Push-Button Environments to stand up the entire platform in new AWS accounts using Terragrunt, Terraform, and GitOps
+- Wrote **Golang** application to generate Terraform from a yaml specification
+- Wrote various Pulumi modules for Pulumi's Automation API for self-service infrastructure
+- Developed an **Internal Developer Platform** using Spotify's Backstage
+- Supported a rapidly growing team through **metrics driven automation**
 
 **Dell SecureWorks** | Counter Threat Unit | **June 2015 - June 2018**<br>
 Information Security Research Advisor
@@ -73,23 +76,23 @@ Network Administrator
 
 ### Education
 
-**Champlain College** | May 2015  
-Bachelor of Science in Computer Networking and Information Security  
-Specialization in Cyber Security, Minor in Digital Forensics  
-Dean's list | Trustee's Scholar  
+**Champlain College** | May 2015
+Bachelor of Science in Computer Networking and Information Security
+Specialization in Cyber Security, Minor in Digital Forensics
+Dean's list | Trustee's Scholar
 Teacher's Assistant - Intro to Networking
 
 ---
 
 ### Activities & Achievements
-**Certified Kubernetes Administrator (CKA)** | Winter 2020  
-**AWS Certified SysOps Administrator - Associate** | Fall 2017  
-**AccessData Certified Examiner (ACE)** | Spring 2013  
-**CompTIA Security+ Certified** | Fall 2013  
-**VMware Certified Associate - Data Center Virtualization** | Fall 2013  
-Competed in the **2013, 2014, & 2015** North Eastern Collegiate Cyber Defense Competition  
-Won contest to attend Black Hat Security Conference 2014  
-Contributed to the Linux Kernel - bf5777bcdc540661f2f5d531a13e4e9c9fb7ee22  
+**Certified Kubernetes Administrator (CKA)** | Winter 2020
+**AWS Certified SysOps Administrator - Associate** | Fall 2017
+**AccessData Certified Examiner (ACE)** | Spring 2013
+**CompTIA Security+ Certified** | Fall 2013
+**VMware Certified Associate - Data Center Virtualization** | Fall 2013
+Competed in the **2013, 2014, & 2015** North Eastern Collegiate Cyber Defense Competition
+Won contest to attend Black Hat Security Conference 2014
+Contributed to the Linux Kernel - bf5777bcdc540661f2f5d531a13e4e9c9fb7ee22
 This resume has its own continuous delivery pipeline (https://bit.ly/2F42xEA)
 
 ---
