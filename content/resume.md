@@ -32,10 +32,12 @@ Senior Principal DevOps Engineer
 - Deployments to production **hundreds of times** per day
 - Cookiecutter project templates for Engineering team to use, including importable modules for Gitlab-CI
 - Developed **Push-Button Kubernetes Clusters** using Terraform, and GitOps
-- Created Push-Button Environments to stand up the entire platform in new AWS accounts using Terragrunt, Terraform, and GitOps
+- Created Push-Button Environments to stand up the entire platform in new AWS accounts using **Terragrunt, Terraform, and GitOps**
+- Wrote API in Golang for keeping metadata of all environments for CI consumption
 - Wrote **Golang** application to generate Terraform from a yaml specification
 - Wrote various Pulumi modules for Pulumi's Automation API for self-service infrastructure
 - Developed an **Internal Developer Platform** using Spotify's Backstage
+- Service Discovery and shared configuration using **Consul**
 - Supported a rapidly growing team through **metrics driven automation**
 
 **Dell SecureWorks** | Counter Threat Unit | **June 2015 - June 2018**<br>
@@ -45,7 +47,6 @@ Information Security Research Advisor
   - Application to ingest detonations from various **malware analysis** sandboxes using an extensible solution for processing, storing, discovering, classifying, and clustering **hundreds of millions** of malicious and non-malicious files
   - Network IDPS Signature Management with signature review and testing using a fleet of network sensors
   - **Vulnerability Database** that feeds into other applications and processes
-  - OSINT Vulnerability list scraping using **Python Scrapy** and **Jira**
   - Ruleset **REST API** for serving ruleset packages to clients
 - Delivered deployment pipelines for AWS, vRealize, and Marathon using Packer, Ansible, and Terraform (https://bit.ly/2Rzy9XQ)
 - Converted Proof of Concept projects to full-stack production grade applications
@@ -113,7 +114,7 @@ This resume has its own continuous delivery pipeline (https://bit.ly/2F42xEA)
 
 **Operating Systems/Virtualization**
 
- Kubernetes (EKS, Rancher, K3s), Mesosphere DC/OS, SmartOS, Docker, KVM, Proxmox, VSphere, VirtualBox
+ Kubernetes (EKS, Rancher, K3s, OpenShift/OKD), Mesosphere DC/OS, SmartOS, Docker, KVM, Proxmox, VSphere, VirtualBox
 
 **Clouds**
 
